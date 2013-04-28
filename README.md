@@ -19,3 +19,4 @@ stripe.charges.create({...});
 
 // Convention for listening for a response:
 // stripe.on('RESOURCE_VERB', function(data) {....});
+stripe.on('create_charge', function(data) {....});
