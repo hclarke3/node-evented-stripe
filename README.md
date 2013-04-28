@@ -12,11 +12,17 @@ node example/app
 ````javascript
 var stripe_api = require('lib/main.js');
 var stripe = new stripe_api(process.env.STRIPE_KEY);
+````
+Convention for calling api:
+stripe.RESOURCE.VERB
 
-// Convention for calling api:
-// stripe.RESOURCE.VERB
+````javascript
 stripe.charges.create({...});
+````
 
-// Convention for listening for a response:
-// stripe.on('RESOURCE_VERB', function(data) {....});
+Convention for listening for a response
+stripe.on('RESOURCE_VERB', function(data) {....});
+
+````javascript
 stripe.on('create_charge', function(data) {....});
+````
