@@ -20,5 +20,3 @@ stripe.on('create_charge', function(data) {
 	stripe.charges.list();
 	console.log(data);
 });
-
-console.log(stripe.coupons)
