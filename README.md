@@ -14,13 +14,15 @@ var stripe_api = require('lib/main.js');
 var stripe = new stripe_api(process.env.STRIPE_KEY);
 ````
 Convention for calling api:
-stripe.RESOURCE.VERB
+
+stripe.RESOURCE.VERB()
 
 ````javascript
 stripe.charges.create({...});
 ````
 
-Convention for listening for a response
+Convention for listening for a response:
+
 stripe.on('RESOURCE_VERB', function(data) {....});
 
 ````javascript
